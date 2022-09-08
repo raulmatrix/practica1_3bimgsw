@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de registro Vacunas Covid-19</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/estiloRegistroAlumnos.css">
+
+
+  <script src="crud.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="#">REGISTRO ALUMNOS</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="inicio.html">Inicio <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="alumnos.html">Alumnos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="carreras.html">Carreras</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="reportes.html">Reportes</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Buscar" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3"></div>
+      <div class="col-lg-6">
+        <div id="interfazUsuario">
+
+          <div id="respuesta">
+
+          </div>
+
+          <h3 class="text-center">Registros Alumnos</h3>
+          <div class="form-group text-center">
+            <div class="row">
+              <div class="col-lg-6"> <label for="">Nombre</label>
+                <input type="text" name="nombre" id="nombres" class="form-control" placeholder="Ingresa tus nombres">
+              </div>
+              <div class="col-lg-6">
+                <label for="">Apellidos</label>
+                <input type="text" name="apellido" class="form-control" placeholder="Ingresa tus apellidos"
+                  id="apellidos">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-lg-6">
+                <label for="">Numero de Carnet</label>
+                <input type="text" name="ci" class="form-control" placeholder="Ingresa tu número de carnet" id="ci">
+              </div>
+              <div class="col-lg-6">
+                <label for="fecha">Fecha nacimiento</label>
+                <div class="input-group date" id="datepickerNac">
+                  <input type="text" class="form-control" id="fechaNac">
+                  <span class="input-group-append">
+                    <span class="input-group-text bg-white">
+                      <i class="fa fa-calendar"></i>
+                    </span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-lg-12">
+                <label id="lblResultado">Sexo</label>
+                <div class="form-check form-check-inline">
+                  <label class="form-check-label" id="lbl_sexo">
+                    <input type="radio" name="masculino" id="masculino" value="H"> Masculino
+                  </label>
+                  <div class="form-check form-check-inline">
+                    <label class="form-check-label" id="lbl_femenino">
+                      <input type="radio" name="femenino" id="femenino" value="M"> Femenino
+                    </label>
+                  </div>
+
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-lg-6">
+                    <label for="departamento">Departamento</label>
+                    <select class="form-control" id="departamento">
+                      <option selected="selected">Cochabamba</option>
+                      <option value="Beni">Beni</option>
+                      <option value="Chuquisaca">Chuquisaca</option>
+                      <option value="La paz">La paz</option>
+                      <option value="Oruro">Oruro</option>
+                      <option value="Pando">Pando</option>
+                      <option value="Potosi">Potosi</option>
+                      <option value="Santa Cruz">Santa cruz</option>
+                      <option value="Tarija">Tarija</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-6">
+                    <label for="municipio">Carrera</label>
+                    <input type="text" name="municipio" class="form-control" placeholder="Ingresa tu Municipio"
+                      id="municipio">
+                  </div>
+                </div>
+                <br>
+
+
+
+
+                <div class="row">
+                  <div class="col-lg-12">
+                    <label for="">Nacionalidad</label>
+                    <select class="form-control" id="dosis">
+                      <option value="1">Boliviana</option>
+                      <option value="2">Argentina</option>
+                      <option value="3">Brasilero</option>
+                    </select>
+                  </div>
+
+                </div>
+                <br>
+                <label for="fecha">Datos Adicionales</label>
+                <div class="input-group date" id="datepickerProx">
+                  <input type="text" class="form-control" id="datosAdicionales">
+                  <span class="input-group-append">
+
+                  </span>
+                </div>
+                <br>
+                <input type="button" onClick="registrarVacuna()" name="submit" value="Registrar"
+                  class="btn btn-primary btn-lg" id="btnRegistrar">
+
+
+              </div>
+            </div>
+
+          </div>
+          <div class="col-lg-3"></div>
+
+
+        </div>
+
+        <script src="bootstrap.js"></script>
+        <script src="JQuery.js"></script>
+        <script src="popper.js"></script>
+        <script src="bootstrap-datepicker.js"></script>
+        <script type="text/javascript">
+          $(function () {
+            $('#datepickerNac').datepicker();
+          });
+        </script>
+        <script type="text/javascript">
+          $(function () {
+            $('#datepickerVac').datepicker();
+          });
+        </script>
+
+        <script type="text/javascript">
+          $(function () {
+            $('#datepickerProx').datepicker();
+          });
+        </script>
+
+</body>
+
+</html>
