@@ -5,3 +5,107 @@ footer{
 body{
     background-color: rgb(109, 196, 167);
 }
+
+@import url('https://fonts.googleapis.com/css?family=Numans');
+
+html,
+body {
+    background-image: url('../img/fondoLogin.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
+    font-family: 'Numans', sans-serif;
+}
+
+.container {
+    height: 100%;
+    align-content: center;
+}
+
+.card {
+    height: 370px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 480px;
+    background-color: rgba(0, 0, 0, 0.85) !important;
+}
+
+.social_icon span {
+    font-size: 50px;
+    margin-left: 10px;
+    color: #42B72A;
+}
+
+.social_icon span:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.card-header h3 {
+    color: white;
+}
+
+.social_icon {
+    position: absolute;
+    right: 8px;
+    top: 350px;
+}
+
+.input-group-prepend span {
+    width: 50px;
+    background-color: #1877F2;
+    color: rgb(255, 255, 255);
+    border: 0 !important;
+}
+
+input:focus {
+    outline: 0 0 0 0 !important;
+    box-shadow: 0 0 0 0 !important;
+
+}
+
+.remember {
+    color: white;
+}
+
+.remember input {
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+    margin-right: 5px;
+}
+
+.login_btn {
+    color: rgb(246, 246, 246);
+    background-color: #31A24C;
+    width: 100px;
+}
+
+.login_btn:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(24, 119, 242);
+}
+
+.links {
+    color: white;
+}
+
+.links a {
+    margin-left: 4px;
+}
+
+.encabezado {
+    color: rgb(255, 255, 255);
+    position: absolute;
+    align-content: center;
+    top: -85px;
+}
+
+.derechosreservados {
+    color: rgb(255, 255, 255);
+    position: absolute;
+    align-content: center;
+    right: 110px;
+
+}
