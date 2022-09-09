@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Corona Admin</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="assets/vendors/jvectormap/jquery-jvectormap.css">
+    <link rel="stylesheet" href="assets/vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="assets/vendors/owl-carousel-2/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/vendors/owl-carousel-2/owl.theme.default.min.css">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- End layout styles -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" />
+  </head>
+  <body>
+    <div class="container-scroller">
+      <!-- partial:partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
+          <H1>REPORTES</H1>
+          <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
+        </div>
+       </nav>
+       <nav class="navbar p-0 fixed-top d-flex flex-row">
+        <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
+          <a class="navbar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
+        </div>
+        <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
+          <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+            <span class="mdi mdi-menu"></span>
+          </button>
+          <ul class="navbar-nav w-100">
+            <li class="nav-item w-100">
+              <form class="nav-link mt-2 mt-md-0 d-none d-lg-flex search">
+                <input type="text" class="form-control" placeholder="Search products">
+              </form>
+            </li>
+          </ul>
+          
+          <ul class="navbar-nav navbar-nav-right">
+            <li class="nav-item">
+                <a href="inicio.html" class="nav-link">
+                  <p>
+                    Inicio
+                    
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="alumnos.html" class="nav-link">
+                  <p>
+                    Alumnos
+                    
+                  </p>
+                </a>
+              </li>
+                
+              <li class="nav-item">
+                <a href="carreras.html" class="nav-link">
+                  <p>
+                   Carreras
+                    
+                  </p>
+                </a>
+              </li> 
+              <li class="nav-item">
+                <a href="reportes.html" class="nav-link">
+                  <p>
+                    Reportes
+                    
+                  </p>
+                </a>
+              </li>
+              
+          </ul>
+          
+          <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+            <span class="mdi mdi-format-line-spacing"></span>
+          </button>
+        </div>
+      </nav>
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+          <div class="container-fluid">
+            <div class="row mb-2">
+              <div class="col-sm-6">
+                <h1>DataTables</h1>
+              </div>
+              <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                  <li class="breadcrumb-item active">DataTables</li>
+                </ol>
+              </div>
+            </div>
+          </div><!-- /.container-fluid -->
+        </section>
+    
+        <!-- Main content -->
+        <section class="content">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  
+                  <!-- /.card-header -->
+                 
+                  <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+    
+                <div class="card">
+                  <div class="card-header">
+                    
+                  </div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-3">
+                        <label for="">Nombre</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-search"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Username">
+                          </div>
+                        
+                      </div>
+                      <div class="col-3">
+                        <label for="">Apellido</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text"><i class="fa fa-search"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="Username">
+                          </div>
+                      </div>
+                      <div class="col-3">
+                        <label>Carrera</label>
+                        <select class="form-control">
+                          <option>option 1</option>
+                          <option>option 2</option>
+                          <option>option 3</option>
+                          <option>option 4</option>
+                          <option>option 5</option>
+                        </select>
+                      </div>
+                      <div class="col-3">
+                        <label for=""> </label>
+                        <label for=""> </label>
+                        <button type="button" class="btn btn-block btn-light btn-sm">BUSCAR</button>
+                      </div>
+                    </div>
+                  <!-- /.card-header -->
+                  <div class="card-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                      <thead>
+                      <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>NickName</th>
+                        <th>Employe</th>
+                        
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                        <td>Trident</td>
+                        <td>Internet
+                          Explorer 4.0
+                        </td>
+                        <td>Win 95+</td>
+                        <td> <div class="form-check">
+                            <input class="form-check-input" type="checkbox" checked>
+                           
+                          </div> </td>
+                        
+                      </tr>
+                      <tr>
+                        <td>Trident</td>
+                        <td>Internet
+                          Explorer 5.0
+                        </td>
+                        <td>Win 95+</td>
+                        <td><div class="form-check">
+                            <input class="form-check-input" type="checkbox" >
+                           
+                          </div></td>
+                      </tr>
+                      <tr>
+                        <td>Trident</td>
+                        <td>Internet
+                          Explorer 5.5
+                        </td>
+                        <td>Win 95+</td>
+                        <td><div class="form-check">
+                            <input class="form-check-input" type="checkbox" >
+                           
+                          </div></td>
+                      </tr>
+                      <tr>
+                        <td>Trident</td>
+                        <td>Internet
+                          Explorer 6
+                        </td>
+                        <td>Win 98+</td>
+                        <td><div class="form-check">
+                            <input class="form-check-input" type="checkbox" checked>
+                           
+                          </div></td>
+                      </tr>
+                      <tr>
+                        <td>Trident</td>
+                        <td>Internet Explorer 7</td>
+                        <td>Win XP SP2+</td>
+                        <td><div class="form-check">
+                            <input class="form-check-input" type="checkbox" >
+                           
+                          </div></td>
+                      </tr>
+                      <tr>
+                        <td>Trident</td>
+                        <td>AOL browser (AOL desktop)</td>
+                        <td>Win XP</td>
+                        <td><div class="form-check">
+                            <input class="form-check-input" type="checkbox" checked>
+                           
+                          </div></td>
+                      </tr>
+                      <tr>
+                        <td>Gecko</td>
+                        <td>Firefox 1.0</td>
+                        <td>Win 98+ / OSX.2+</td>
+                        <td><div class="form-check">
+                            <input class="form-check-input" type="checkbox" checked>
+                           
+                          </div></td>
+                      </tr>
+                      
+                      </tfoot>
+                    </table>
+                  </div>
+                  <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+              </div>
+              <!-- /.col -->
+            </div>
+            <!-- /.row -->
+          </div>
+          <!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+      </div>
+    </div>
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+      </aside>
+      <!-- /.control-sidebar -->
+    </div>
+    <!-- ./wrapper -->
+    
+    <!-- jQuery -->
+    <script src="../../plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- DataTables  & Plugins -->
+    <script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="../../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="../../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+    <script src="../../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="../../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+    <script src="../../plugins/jszip/jszip.min.js"></script>
+    <script src="../../plugins/pdfmake/pdfmake.min.js"></script>
+    <script src="../../plugins/pdfmake/vfs_fonts.js"></script>
+    <script src="../../plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+    <script src="../../plugins/datatables-buttons/js/buttons.print.min.js"></script>
+    <script src="../../plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../../dist/js/adminlte.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="../../dist/js/demo.js"></script>
+    <!-- Page specific script -->
+    <script>
+        $(function () {
+          $("#example1").DataTable({
+            "responsive": true, "lengthChange": false, "autoWidth": false,
+            "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+          }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+          $('#example2').DataTable({
+            "paging": true,
+            "lengthChange": false,
+            "searching": false,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false,
+            "responsive": true,
+          });
+        });
+      </script>
+  </body>
+</html>
