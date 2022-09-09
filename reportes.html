@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+    <div class="container-fluid d-flex flex-column" style="min-height: 100vh">
+        <div class="row bg-dark">
+            <div class="col">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+                    <a class="navbar-brand" href="#">Reportes</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse float-right justify-content-end" id="navbarNavAltMarkup">
+                      <div class="navbar-nav">
+                        <a class="nav-item nav-link" href="inicio.html">Inicio <span class="sr-only">(current)</span></a>
+                        <a class="nav-item nav-link" href="alumnos.html">Alumnos</a>
+                        <a class="nav-item nav-link" href="carreras.html">Carreras</a>
+                        <a class="nav-item nav-link active" href="reportes.html">Reportes</a>
+                        
+                      </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="row flex-grow-1">
+            <div class="col-md-3 border">
+                <div class="mb-3 my-3">
+                    <h5 class="font-weight-bold text-uppercase">Datos del Estudiante</h5>
+                </div>
+                <form class="mx-3">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Apellido</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Carrera</label>
+                        <select class="form-control" name="carreras" id="carreras">
+                            <option></option>
+                            <option value="sistemasInformaticos">Sistemas Informaticos</option>
+                            <option value="secretariado">Secretariado</option>
+                            <option value="gastronomia">Gastronomia</option>
+                            <option value="contabilidad">Contabilidad</option>
+                        </select>
+                    </div>
+                    
+                    <div class="mb-3 mt-5">
+                        <button type="submit" class="btn btn-secondary btn-block">Buscar</button>
+                    </div>
+                </form>
+
+            </div>
+            <div class="col-md-9 border">
+                <!-- tabla-->
+                <div class="container col-11 my-3">
+                    <div class="">
+                        <h4 class=" text-uppercase">Reporte de Estudiantes</h4>
+                    </div>
+                    <table class="table table-light table-striped">
+                        <thead class="thead-dark">
+                            <tr>
+                              <th scope="col">#</th>
+                              <th scope="col">Nombres</th>
+                              <th scope="col">Primer Apellido</th>
+                              <th scope="col">Segundo Apellido</th>
+                              <th scope="col">Carrera</th>
+                              <th scope="col">Semestre</th>
+                              <th scope="col">Edad</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">1</th>
+                              <td>Mark</td>
+                              <td>Otto</td>
+                              <td>Hiro</td>
+                              <td>Sinstemas Informaticos</td>
+                              <td>Primer Semestre</td>
+                              <td>21</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Maria</td>
+                                <td>Ceballos</td>
+                                <td>Garcia</td>
+                                <td>Secretariado</td>
+                                <td>Segundo Semestre</td>
+                                <td>20</td>
+                              </tr>
+    
+    
+                          </tbody>
+                    </table>
+                </div>
+                <!-- end table-->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.js"></script>
+</body>
+</html>
