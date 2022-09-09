@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+</head>
+<body>
+  <div class="row">
+    <div class="col-6">
+      <h1>Carreras </h1>
+    </div>
+    <div class="col-3">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="inicio.html">Inicio <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="alumnos.html">Alumnos</a>
+            <a class="nav-item nav-link" href="carreras.html">Carreras</a>
+            <a class="nav-item nav-link disabled" href="reportes.html">Reportes</a>
+          </div>
+        </div>
+      </nav>
+      
+    </div>
+  </div>
+  <div class="centrar-form">
+  <form class="form" method="post">
+<div class="row">
+      <div class="col-6">
+        <label for="">Nombre :</label><br>
+        <input type="text" name="nombreest" id="nombreest">
+      </div>
+      <div class="col-6">
+        <label for="">Apellido :</label><br>
+        <input type="text" name="Apellido" id="Apellido">
+      </div>
+
+</div>
+    <div class="row">
+      <div class="col-4">
+      
+        <label for="">Fecha Nacimiento:</label><br>
+        <input type="date" name="fechanac" id="fechanac">
+        <br>
+      </div>
+      <div class="col-4">
+
+        <label for="">Numero Carnet:</label><br>
+        <input type="number" name="carnet" id="carnet">
+      </div>
+      <div class="col-4">
+
+        <label for="">Sexo:</label> <br>
+        <input type="text" name="sexo" id="sexo">
+      </div>
+
+    </div>
+
+     <div class="row">
+        <div class="col-12">
+          <label for="">Carrera:</label><br>
+          <select name="Carrera" id="Carrera">
+            <option value="1">ComboBox</option>
+          </select>
+      <br>
+        </div>
+     </div>
+
+<div class="row">
+  <div class="col-6">
+    <label for="">Nacionalidad:</label><br>
+    <select name="Nacionalidad" id="Nacionalidad">
+      <option value="1">ComboBox</option>
+    </select>
+  </div>
+  <div class="col-6">
+    <label for="">Departamento:</label><br>
+    <select name="Departamento" id="Departamento">
+      <option value="1">ComboBox</option>
+    </select>
+  </div>      
+</div>
+<div class="row">
+  <div class="col-12">
+    <label for="">Datos Adicionales:</label><br>
+    <input style=" HEIGHT: 50px"
+    size=32 name=text1 type="text" name="datos" id="datos"><br>
+  </div>      
+</div>   
+<div class="row">
+  <div class="col-12">
+    <input type="submit" value="Registrar">
+  </div>      
+</div>       
+  </form>
+</div>
+
+       <script src="js/jquery.js"></script>
+       <script src="js/boostrap.js"></script>
+       <script src="js/popper.js"></script>
+</body>
+</html>
