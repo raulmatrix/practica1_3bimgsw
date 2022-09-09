@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body class="bg-secondary text-light" style="font-family: Times New Roman;">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="Carreras.html">CARRERAS</a> 
+  <div class="navbar-nav ml-auto">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="Inicio.html">Inicio</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Alumnos.html">Alumnos</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="Carreras.html">Carreras</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Reportes.html">Reportes</a>
+      </li>
+    </ul>  
+  </div>
+</nav>
+	<main></main>
+	<section></section>
+	<article>
+		<form class="formulario mt-4 p-3">
+			<div class="container" style="width: 800px;">
+				<div class="row">
+					<div class="col-md-6">
+						<label for="nombre">Nombre:</label>
+				        <input class="form-control" type="text" name="nombre" id="nombre" required autofocus>
+					</div>
+					<div class="col-md-6">
+						 <label for="Apellidos">Apellidos:</label>
+						<input class="form-control" type="text" name="Apellidos" id="Apellidos" required>
+					</div>
+				</div><br>
+				<div class="row">
+					<div class="col-md-4">
+						<label for="fechaNacimiento">Fecha de Nacimiento:</label>
+						<input class="form-control" type="date" name="fechaNacimiento" id="fechaNacimiento" required>
+					</div>
+					<div class="col-md-4">
+						<label for="Ci">Número de Carnet:</label>
+						<input class="form-control" type="text" name="Ci" required id="Ci">
+					</div>
+					<div class="col-md-4">
+						<label for="sexo">Sexo:</label>
+						<input class="form-control" type="text" name="sexo" required id="sexo">
+					</div>
+				</div><br>
+				<div class="row">
+					<div class="col-md-12">
+						<label for="carrera">Carrera:</label>
+						<select class="form-control" name="carrera" id="carrera">
+							<option>Contaduría General</option>
+							<option>Secretariado Ejecutivo</option>
+							<option>Mercadotecnia</option>
+							<option selected>Sistemas Informáticos</option>
+						</select>
+					</div>
+				</div><br>
+				<div class="row">
+					<div class="col-md-6">
+						<label for="nacionalidad">Nacionalidad:</label>
+						<select class="form-control" name="nacionalidad" id="nacionalidad">
+							
+							<option>Afgana</option>
+							<option>Alemana</option>
+							<option>Árabe</option>
+							<option>Argentina</option>
+							<option>Australiana</option>
+							<option>Belga</option>
+							<option selected>Boliviana</option>
+							<option>Brasileña</option>
+							<option>Camboyana</option>
+							<option>Canadiense</option>
+							<option>Chilena</option>
+							<option>Colombiana</option>
+							<option>Coreana</option>
+							<option>Costarricense</option>
+							<option>Cubana</option>
+							<option>Danesa</option>
+							<option>Ecuatoriana</option>
+							<option>Egipcia</option>
+							<option>Salvadoreña</option>
+							<option>Escocesa</option>
+							<option>Española</option>
+							<option>Estadounidense</option>
+							<option>Estonia</option>
+							<option>Etiope</option>
+							<option>Filipina</option>
+							<option>Finlandesa</option>
+							<option>Francesa</option>
+							<option>Galesa</option>
+							<option>Griega</option>
+							<option>Guatemalteca</option>
+							<option>Haitiana</option>
+							<option>Holandesa</option>
+							<option>Hondureña</option>
+							<option>Indonesa</option>
+							<option>Inglesa</option>
+							<option>Iraquí</option>
+							<option>Iraní</option>
+							<option>Irlandesa</option>
+							<option>Israelí</option>
+							<option>Italiana</option>
+							<option>Japonesa</option>
+							<option>Jordana</option>
+							<option>Laosiana</option>
+							<option>Letona</option>
+							<option>Letonesa</option>
+							<option>Malaya</option>
+							<option>Marroquí</option>
+							<option>Mexicana</option>
+							<option>Nicaragüense</option>
+							<option>Noruega</option>
+							<option>Neozelandesa</option>
+							<option>Panameña</option>
+							<option>Paraguaya</option>
+							<option>Peruana</option>
+							<option>Polaca</option>
+							<option>Portuguesa</option>
+							<option>Puertorriqueño</option>
+							<option>Dominicana</option>
+							<option>Rumana</option>
+							<option>Rusa</option>
+							<option>Sueca</option>
+							<option>Suiza</option>
+							<option>Tailandesa</option>
+							<option>Taiwanesa</option>
+							<option>Turca</option>
+							<option>Ucraniana</option>
+							<option>Uruguaya</option>
+							<option>Venezolana</option>
+							<option>Vietnamita</option>
+						</select>
+					</div>
+					<div class="col-md-6">
+						<label for="departamento">Departamento:</label>
+						<select class="form-control" name="departamento" id="departamento">
+							<option selected>Cochabamba</option>
+							<option>La Paz</option>
+							<option>Potosi</option>
+							<option>Tarija</option>
+							<option>Beni</option>
+							<option>Pando</option>
+							<option>Santa Cruz</option>
+							<option>Oruro</option>
+							<option>Chuquisaca</option>
+						</select>
+					</div>
+				</div><br>
+				<div class="row">
+					<div class="col-md-12">
+						<label for="datos">Datos Adicionales:</label>
+						<textarea class="form-control" name="datos" id="datos"></textarea>
+					</div>
+				</div><br>
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<button type="submit" class="btn btn-dark">Registrar</button>
+					</div>
+				</div>
+			</div>
+		</form>
+	</article>
+	<aside></aside>
+<footer class="bg-dark text-center">
+  <div class="p-3">
+    <h6 class="text-light">&copy; 2022 Copyright: Gabriel Navia Ordoñez</h6>
+  </div>
+</footer>
+</body>
+</html>
