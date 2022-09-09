@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <title>Fullcalendar Drag and Drop Event | CORK - Multipurpose Bootstrap Dashboard Template </title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico"/>
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/plugins.css" rel="stylesheet" type="text/css" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+
+    <!-- BEGIN PAGE LEVEL STYLE -->
+    <link href="plugins/flatpickr/flatpickr.css" rel="stylesheet" type="text/css">
+    <link href="plugins/flatpickr/custom-flatpickr.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/forms/theme-checkbox-radio.css" rel="stylesheet" type="text/css" />
+    <!-- END PAGE LEVEL STYLE -->
+    <style>
+        .widget {
+    margin-bottom: 10px;
+    border: none;
+    box-shadow: rgb(145 158 171 / 24%) 0px 0px 2px 0px, rgb(145 158 171 / 24%) 0px 16px 32px -4px;
+}
+.widget-content-area { border-radius: 6px; }
+        .daterangepicker.dropdown-menu {
+            z-index: 1059;
+        }
+    </style>
+
+</head>
+<body class="alt-menu sidebar-noneoverflow">
+    
+    <!--  BEGIN NAVBAR  -->
+    <!-- <div class="header-container fixed-top"> -->
+        <header class="header navbar navbar-expand-sm expand-header">
+            <a href="javascript:void(0);" class="sidebarCollapse" data-placement="bottom"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></a>
+
+            <ul class="navbar-item flex-row ml-auto">
+
+                <li class="nav-item align-self-center search-animated">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search toggle-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    <form class="form-inline search-full form-inline search" role="search">
+                        <div class="search-bar">
+                            <input type="text" class="form-control search-form-control  ml-lg-auto" placeholder="Search...">
+                        </div>
+                    </form>
+                </li>
+
+                <li class="nav-item dropdown language-dropdown">
+                    <a href="javascript:void(0);" class="nav-link dropdown-toggle" id="language-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="assets/img/ca.png" class="flag-width" alt="flag">
+                    </a>
+                    <div class="dropdown-menu position-absolute" aria-labelledby="language-dropdown">
+                        <a class="dropdown-item d-flex" href="javascript:void(0);"><img src="assets/img/de.png" class="flag-width" alt="flag"> <span class="align-self-center">&nbsp;German</span></a>
+                        <a class="dropdown-item d-flex" href="javascript:void(0);"><img src="assets/img/jp.png" class="flag-width" alt="flag"> <span class="align-self-center">&nbsp;Japanese</span></a>
+                        <a class="dropdown-item d-flex" href="javascript:void(0);"><img src="assets/img/fr.png" class="flag-width" alt="flag"> <span class="align-self-center">&nbsp;French</span></a>
+                        <a class="dropdown-item d-flex" href="javascript:void(0);"><img src="assets/img/ca.png" class="flag-width" alt="flag"> <span class="align-self-center">&nbsp;English</span></a>
+                    </div>
+                </li>
+                
+                <li class="nav-item dropdown message-dropdown">
+                    <a href="javascript:void(0);" class="nav-link dropdown-toggle" id="messageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    </a>
+                    <div class="dropdown-menu position-absolute" aria-labelledby="messageDropdown">
+                        <div class="">
+                            <a class="dropdown-item">
+                                <div class="">
+
+                                    <div class="media">
+                                        <div class="user-img">
+                                            <div class="avatar avatar-xl">
+                                                <span class="avatar-title rounded-circle">KY</span>
+                                            </div>
+                                        </div>
+                                        <div class="media-body">
+                                            <div class="">
+                                                <h5 class="usr-name">Kara Young</h5>
+                                                <p class="msg-title">ACCOUNT UPDATE</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </a>
+                            <a class="dropdown-item">
+                                <div class="">
+                                    <div class="media">
+                                        <div class="user-img">
+                                            <img src="assets/img/90x90.jpg" class="img-fluid mr-2" alt="avatar">
+                                        </div>
+                                        <div class="media-body">
+                                            <div class="">
+                                                <h5 class="usr-name">Daisy Anderson</h5>
+                                                <p class="msg-title">ACCOUNT UPDATE</p>
+                                            </div>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                            </a>
+                            <a class="dropdown-item">
+                                <div class="">
+
+                                    <div class="media">
+                                        <div class="user-img">
+                                            <div class="avatar avatar-xl">
+                                                <span class="avatar-title rounded-circle">OG</span>
+                                            </div>
+                                        </div>
+                                        <div class="media-body">
+                                            <div class="">
+                                                <h5 class="usr-name">Oscar Garner</h5>
+                                                <p class="msg-title">ACCOUNT UPDATE</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown notification-dropdown">
+                    <a href="javascript:void(0);" class="nav-link dropdown-toggle" id="notificationDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bell"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg><span class="badge badge-success"></span>
+                    </a>
+                    <div class="dropdown-menu position-absolute" aria-labelledby="notificationDropdown">
+                        <div class="notification-scroll">
+
+                            <div class="dropdown-item">
+                                <div class="media server-log">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-server"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6" y2="6"></line><line x1="6" y1="18" x2="6" y2="18"></line></svg>
+                                    <div class="media-body">
+                                        <div class="data-info">
+                                            <h6 class="">Server Rebooted</h6>
+                                            <p class="">45 min ago</p>
+                                        </div>
+
+                                        <div class="icon-status">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="dropdown-item">
+                                <div class="media ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                                    <div class="media-body">
+                                        <div class="data-info">
+                                            <h6 class="">Licence Expiring Soon</h6>
+                                            <p class="">8 hrs ago</p>
+                                        </div>
+
+                                        <div class="icon-status">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="dropdown-item">
+                                <div class="media file-upload">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                                    <div class="media-body">
+                                        <div class="data-info">
+                                            <h6 class="">Kelly Portfolio.pdf</h6>
+                                            <p class="">670 kb</p>
+                                        </div>
+
+                                        <div class="icon-status">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown user-profile-dropdown  order-lg-0 order-1">
+                    <a href="javascript:void(0);" class="nav-link dropdown-toggle user" id="userProfileDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    </a>
+                    <div class="dropdown-menu position-absolute" aria-labelledby="userProfileDropdown">
+                        <div class="user-profile-section">
+                            <div class="media mx-auto">
+                                <img src="assets/img/90x90.jpg" class="img-fluid mr-2" alt="avatar">
+                                <div class="media-body">
+                                    <h5>Shaun Park</h5>
+                                    <p>Project Leader</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dropdown-item">
+                            <a href="user_profile.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg> <span>Profile</span>
+                            </a>
+                        </div>
+                        <div class="dropdown-item">
+                            <a href="apps_mailbox.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-inbox"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path></svg> <span>Inbox</span>
+                            </a>
+                        </div>
+                        <div class="dropdown-item">
+                            <a href="auth_lockscreen.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-lock"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg> <span>Lock Screen</span>
+                            </a>
+                        </div>
+                        <div class="dropdown-item">
+                            <a href="auth_login.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-out"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg> <span>Log Out</span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </header>
+    <!-- </div> -->
+    <!--  END NAVBAR  -->
+
+    <!--  BEGIN MAIN CONTAINER  -->
+    <!-- <div class="main-container sidebar-closed sbar-open" id="container"> -->
+
+        <div class="overlay"></div>
+        <div class="cs-overlay"></div>
+        <div class="search-overlay"></div>
+
+        <!--  BEGIN SIDEBAR  -->
+
+        <!--  END SIDEBAR  -->
+
+        <!--  BEGIN CONTENT AREA  -->
+        <div class="col-md-4 col-12">
+
+        <div id="content" class="main-content">
+            <div class="layout-px-spacing">
+                <div class="row layout-top-spacing" id="cancel-row">
+                    <div class="col-xl-12 col-lg-12 col-md-12">
+                        <div class="statbox widget box box-shadow">
+                            <div class="widget-content widget-content-area">
+                                <div class="col-md-4 col-12">
+                                    <form action="javascript:void(0);" class="form-horizontal mt-md-0 mt-3 text-md-right text-center">
+                                        <button id="myBtn" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar mr-2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg> </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- The Modal -->
+                    <div id="addEventsModal" class="modal animated fadeIn">
+
+                        <div class="modal-dialog modal-lg">
+                            
+                            <!-- Modal content -->
+                            <div class="modal-content">
+
+                                <div class="modal-body">
+
+                                    <span class="close">&times;</span>
+
+                                    <div class="add-edit-event-box">
+                                        <div class="add-edit-event-content">
+                                            <h5 class="add-event-title modal-title">Carrera</h5>
+                                            <h5 class="edit-event-title modal-title">Edit Events</h5>
+
+                                            <form class="">
+
+                                                <div class="row">
+
+                                                    <div class="col-md-12">
+                                                        <label for="start-date" class="">Nombre :</label>
+                                                        <div class="d-flex event-title">
+                                                            <input id="write-e" type="text" placeholder="Ingrese su nombre" class="form-control" name="task">
+                                                        </div>
+                                                        <label for="start-date" class="">Apellido:</label>
+                                                        <div class="d-flex event-title">
+                                                            <input id="write-e" type="text" placeholder="Ingrese su apellido" class="form-control" name="task">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-12 col-sm-12 col-12 ">
+                                                        <div class="form-group start-date">
+                                                            <label for="start-date" class="">Fecha nacimientooooo:</label>
+                                                            <div class="d-flex">
+                                                                <input type="date" placeholder="Start Date" class="form-control" type="text">
+                                                            </div>
+                                                            <label for="start-date" class="">Nro de carnet:</label>
+                                                            <div class="d-flex event-title">
+                                                                <input id="write-e" type="text" placeholder="Ingrese numero de carnet" class="form-control" name="task">
+                                                            </div>
+                                                            <label for="start-date" class="">Sexo:</label>
+                                                            <div class="d-flex event-title">
+                                                                <input id="write-e" type="text" placeholder="Ingrese sexo" class="form-control" name="task">
+                                                            </div>
+                                                            <label for="start-date" class="">Carrera:</label>
+                                                            <div>
+                                                                <input id="write-e" type="text" placeholder="" class="form-control" name="task">
+                                                            </div>
+                                                            <div class="dropdown show">
+                                                                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                  Ingrese Carrera
+                                                                </a>
+                                                              
+                                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                                  <a class="dropdown-item" href="#">Sistemas Informaticos</a>
+                                                                  <a class="dropdown-item" href="#">Secretariado</a>
+                                                                  <a class="dropdown-item" href="#">Contabilidad</a>
+                                                                  <a class="dropdown-item" href="#">Mercadotecnia</a>
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group end-date">
+                                                                <label for="end-date" class="">Departamento:</label>
+                                                                <input id="write-e" type="text" placeholder="" class="form-control" name="task">
+                                                                <div class="dropdown show">
+                                                                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                      Departamentos
+                                                                    </a>
+                                                                  
+                                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                                      <a class="dropdown-item" href="#">La Paz</a>
+                                                                      <a class="dropdown-item" href="#">Cochabamba</a>
+                                                                      <a class="dropdown-item" href="#">Oruro</a>
+                                                                      <a class="dropdown-item" href="#">Potosi</a>
+                                                                      <a class="dropdown-item" href="#">Santa Cruz</a>
+                                                                      <a class="dropdown-item" href="#">Beni</a>
+                                                                      <a class="dropdown-item" href="#">Tarija</a>
+                                                                      <a class="dropdown-item" href="#">Chuquisaca</a>
+                                                                      <a class="dropdown-item" href="#">Pando</a>
+                                                                      <a class="dropdown-item" href="#">Sucre</a>
+    
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- <div class="col-md-6 col-sm-6 col-12"> -->
+                                                 
+                                                    <!-- </div> -->
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <label for="start-date" class="">Datos Adicionales:</label>
+                                                        <div class="d-flex event-description">
+                                                            <textarea id="taskdescription" placeholder="Añadir datos adicionales" rows="3" class="form-control" name="taskdescription"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- <div class="row"> -->
+                                                    <div class="col-md-12">
+                                                        <div class="event-badge">
+                                                            <p class="">Badge:</p>
+
+                                                            <div class="d-sm-flex d-block">
+                                                                <div class="n-chk">
+                                                                    <label class="new-control new-radio radio-primary">
+                                                                      <input type="radio" class="new-control-input" name="marker" value="bg-primary">
+                                                                      <span class="new-control-indicator"></span>Work
+                                                                    </label>
+                                                                </div>
+
+                                                                <div class="n-chk">
+                                                                    <label class="new-control new-radio radio-warning">
+                                                                      <input type="radio" class="new-control-input" name="marker" value="bg-warning">
+                                                                      <span class="new-control-indicator"></span>Travel
+                                                                    </label>
+                                                                </div>
+
+                                                                <div class="n-chk">
+                                                                    <label class="new-control new-radio radio-success">
+                                                                      <input type="radio" class="new-control-input" name="marker" value="bg-success">
+                                                                      <span class="new-control-indicator"></span>Personal
+                                                                    </label>
+                                                                </div>
+
+                                                                <div class="n-chk">
+                                                                    <label class="new-control new-radio radio-danger">
+                                                                      <input type="radio" class="new-control-input" name="marker" value="bg-danger">
+                                                                      <span class="new-control-indicator"></span>Important
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                <!-- </div> -->
+
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <!-- <div class="modal-footer"> -->
+                                    <button id="discard" class="btn" data-dismiss="modal">Discard</button>
+                                    <button id="add-e" class="btn">Add Task</button>
+                                    <button id="edit-event" class="btn">Save</button>
+                                <!-- </div> -->
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <!--  END CONTENT AREA  -->
+    <!-- </div> -->
+    <!-- END MAIN CONTAINER -->
+
+    <!-- START GLOBAL MANDATORY SCRIPTS -->
+    <script src="assets/js/libs/jquery-3.1.1.min.js"></script>
+    <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    
+    <script>
+        $(document).ready(function() {
+            App.init();
+        });
+    </script>
+    <script src="assets/js/custom.js"></script>
+    <!-- END GLOBAL MANDATORY SCRIPTS -->
+
+    <!-- BEGIN PAGE LEVEL SCRIPTS -->
+    <script src="plugins/fullcalendar/moment.min.js"></script>
+    <script src="plugins/flatpickr/flatpickr.js"></script>
+    <script src="plugins/fullcalendar/fullcalendar.min.js"></script>
+    <!-- END PAGE LEVEL SCRIPTS -->
+
+    <!--  BEGIN CUSTOM SCRIPTS FILE  -->
+    <script src="plugins/fullcalendar/custom-fullcalendar.advance.js"></script>
+    <!--  END CUSTOM SCRIPTS FILE  -->
+</body>
+</html>
